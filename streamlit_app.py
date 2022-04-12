@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 from apriori import runApriori, dataFromFile, to_str_results
-import os
+from io import StringIO
+
 st.markdown("# Apriori Demonstration")
 
 st.sidebar.markdown(
@@ -44,7 +45,7 @@ if uploaded_file is not None:
     confidence = st.slider("Enter the Minimum Confidence Value", min_value=0.1,
                         max_value=0.9, value=0.6, help=confidence_helper)
 
-    inFile = dataFromFile(uploaded_file)
+    inFile = dataFromFile(uploaded_file.name)
 
     items, rules = runApriori(inFile, support, confidence)
 
