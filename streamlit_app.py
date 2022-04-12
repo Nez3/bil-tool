@@ -8,9 +8,9 @@ st.sidebar.markdown(
     """BIL MINI PROJECT :
 
 > *Group Members :-*\n
-> *Swapnil Deshmukh*\n
-> *Rushikesh Bobade*\n
-> *Rhutuja Kale*
+> *Neha Bharambe*\n
+> *Bryan Ronad*\n
+> *Esther Chettiar*
 """
 )
 
