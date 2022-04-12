@@ -44,7 +44,7 @@ if uploaded_file is not None:
     confidence = st.slider("Enter the Minimum Confidence Value", min_value=0.1,
                         max_value=0.9, value=0.6, help=confidence_helper)
 
-    inFile = dataFromFile(default_csv)
+    inFile = dataFromFile(uploaded_file)
 
     items, rules = runApriori(inFile, support, confidence)
 
